@@ -1,5 +1,5 @@
-# Get-started-with-Django-AngularJs
- This is a simple site designed incoperating angularjs and django. Basically in this example i will be discussing about the main functions in angular that going to be extreamly usefule.
+# Get-started-with-Django-AngularJS
+ This is a simple site designed incorporating angularjs and django. Basically in this example i will be discussing about the main functions in angular that going to be extremely useful.
 
 
 AngularJS is a JavaScript framework. It can be added to an HTML page with a <script> tag.                 
@@ -27,7 +27,7 @@ The **ng-bind** directive binds application data to the HTML view.
 </html>
 ```
 
-### Explanation about the above exmaple code
+### Explanation about the above example code
 AngularJS starts automatically when the web page has loaded.                                                                                        
 
 
@@ -47,7 +47,7 @@ The **ng-app** directive defines the application, the **ng-controller** directiv
 ### Example code for introduction of Angular js **modules** and **controllers** 
 
 
-#### This HTML code should be in your index.html file in django template folder
+#### This HTML code should be in your index.html file in Django template folder
 
 ```html 
 
@@ -101,7 +101,7 @@ app.controller('myCtrl', function($scope) {
 
 
 ```
-One of the important thing you observed in the above javascript is the **$scope** its the  binding part between the HTML (view) and the JavaScript (controller).
+One of the important thing you observed in the above JavaScript is the **$scope** its the  binding part between the HTML (view) and the JavaScript (controller).
  
 
 ### Understanding the Scope
@@ -113,7 +113,6 @@ If we consider an AngularJS application to consist of:
     Controller, which is the JavaScript function that makes/changes/removes/controls the data.
 
 Then the scope is the Model.
-
 The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.
  
  
