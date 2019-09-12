@@ -19,8 +19,8 @@ The **ng-bind** directive binds application data to the HTML view.
 <body>
 
 <div ng-app="">
-  <p>Name: <input type="text" ng-model="name"></p>
-  <p ng-bind="name"></p>
+  <p>Name: <input type="text" ng-model="message"></p>
+  <p ng-bind="message"></p>
 </div>
 
 </body>
@@ -32,8 +32,17 @@ AngularJS starts automatically when the web page has loaded.
 
 
 The **ng-app** directive tells AngularJS that the ```html<div>``` element is the "owner" of an AngularJS application                 
-The **ng-model** directive binds the value of the input field to the application variable name                                          
-The **ng-bind** directive binds the content of the ```html<p>``` element to the application variable name                                   
+The **ng-model** directive binds the value of the input field to the application variable *message*                                          
+The **ng-bind** directive binds the content of the ```html<p>``` element to the application variable *message*   
+
+
+
+
+
+
+
+
+
  
  
  
