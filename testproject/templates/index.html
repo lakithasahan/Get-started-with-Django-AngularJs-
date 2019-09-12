@@ -1,0 +1,118 @@
+{% load staticfiles %}
+{% load static %}
+
+
+<script type="text/javascript" src="{% static 'angular.js' %}"></script>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<!DOCTYPE html>
+
+<html>
+<title>Angular+Django</title>
+<body>
+<h1> This is a Angular+Django simple example to get start! </h1>
+
+<div>
+    <p><strong>Stage 01 -Shows how the normal Django form gets its entered value without using Angular</strong></p>
+    <p>Look into forms.py ,views.py and index.html files in the main project folder to get the understanding of how it
+        works!</p>
+    <form method="post">
+        {% csrf_token %}
+        <p>Please Enter a message</p>{{ form.offset }}
+        <button type="submit" name="submit">submit</button>
+
+    </form>
+
+    <p>message typed in above form - {{ offset }}</p>
+
+</div>
+
+
+<br>
+{% verbatim %}
+    <p><strong> Stage 02-Angular 'app' module with two controller are created</strong></p>
+    <p>Below shows a simple example where you can access the 1st controller variables using the 2nd controller</p>
+    <p>For this example please look into main.js and index.html files to get complete understanding</p>
+    <div ng-app="myApp">
+
+        <div ng-controller="FirstCtrl">
+            <p>Input Data to 1st controller</p>
+            Input Data: <input type="text" ng-model="firstName"><br>
+            Controller Output: {{ firstName }}
+
+
+        </div>
+        <br>
+        <div ng-controller="SecondCtrl">
+            <p>Accessing the 1st controller entered varible using the 2nd controller</p>
+
+            Data accessed using 2nd controller : {{ firstName|uppercase }}
+
+        </div>
+        <br>
+        <p><strong>Stage 03- We are trying to update a plot realtime using Angular</strong></p>
+        <p>For this example please look into main.js and index.html files to get complete understanding</p>
+        <div ng-controller="Controller_get_amplitude">
+
+            Amplitude value for the plot <input type="text" ng-model="amplitude"><br>
+            <p>Entered amplitude-{{ amplitude }}</p>
+
+        </div>
+
+        <div ng-controller="plotting_controler">
+
+            <p>Frequency Change</p>
+            <input type="range" min="1" max="100" class="slider" ng-model="frequency_slider">{{ amplitude_slider }}
+            <br>mj
+            <!--
+            <p>Frequency Change</p>
+            <input type="range" min="1" max="100" value="2" class="slider" id="myRange" ng-model="frquency">
+            <br>
+            -->
+        </div>
+        <div id="myDiv">
+
+        </div>
+        <br>
+
+        <div ng-controller="list">
+            <p><strong>Stage 04- We are trying to update a list using Angular</strong></p>
+            <p>For this example please look into main.js and index.html files to get complete understanding</p>
+            <ul>
+                <li ng-repeat="x in products">{{ x }}</li>
+            </ul>
+            <input ng-model="addMe">
+            <button ng-click="addItem()">Add</button>
+
+
+        </div>
+        <br>
+        <p><strong>Stage 04-In this section we routes your application to different pages without reloading the entire
+            application.</strong></p>
+        <p>For this example please look into main.js and index.html files to get complete understanding</p>
+
+        <p><a href="#/!">Main</a></p>
+        <a href="#!banana">Banana</a>
+        <a href="#!tomato">Tomato</a>
+        <br>
+        <div class="ng-view"></div>
+
+    </div>
+
+
+
+
+
+
+    </body>
+    </html>
+
+{% endverbatim %}
+
+</body>
+
+</html>
+
+
