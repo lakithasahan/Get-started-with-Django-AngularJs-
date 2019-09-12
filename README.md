@@ -119,6 +119,9 @@ The scope is a JavaScript object with properties and methods, which are availabl
 To master and introduce AngularJS to your project efficiently and fast i have created a simple django site with different example codes.You can download the testproject django file and run it in your browser.
  
  
+ ![aguler1](https://user-images.githubusercontent.com/24733068/64769697-1ae89300-d58f-11e9-87b2-95c10e03814d.png)
+ 
+ 
  
  
  
