@@ -37,7 +37,6 @@ The **ng-bind** directive binds the content of the ```html<p>``` element to the 
 
 
 
-
 ### AngularJS Applications
 
 AngularJS **modules** define AngularJS applications.                                                                                    
@@ -45,12 +44,48 @@ AngularJS **controllers** control AngularJS applications.
 The **ng-app** directive defines the application, the **ng-controller** directive defines the controller.                                     
 
 
+### Example code for introduction of Angular js **modules** and **controllers** 
 
 
- 
- 
- 
- 
+#### This HTML code should be in your index.html file in django template folder
+
+```html 
+
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
+<body>
+{% verbatim %} 
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+{% endverbatim %}
+ </body>
+</html>
+```
+### Important factors to remember
+
+1)Since Django and Angular both use **{{}}** tags to avoid confusion, when we want to use **{{}}** in Angular framework we have to add **{% verbatim %} {% endverbatim %}** surounding the ng-app as shown above.                                                                               
+2)Don't forget to **load** and add the path of your static directory where you store main.js file to your Django settings file as above.                                       
+```
+STATIC_URL = '/static/'
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'node_modules/angular'),
+)
+```
+#### Below Javascript file hould be in your static folder,Always remeber to give the correct script path location in index.html file
  
  
  
