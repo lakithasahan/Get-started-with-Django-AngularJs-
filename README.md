@@ -116,9 +116,7 @@ Then the scope is the Model.
 The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.
  
  
- 
- 
- 
+To master and introduce AngularJS to your project efficiently and fast i have created a simple django site with different example codes.You can download the testproject django file and run it in your browser.
  
  
  
