@@ -38,7 +38,11 @@ The **ng-bind** directive binds the content of the ```html<p>``` element to the 
 
 
 
+### AngularJS Applications
 
+AngularJS **modules** define AngularJS applications.                                                                                    
+AngularJS **controllers** control AngularJS applications.                                                                                     
+The **ng-app** directive defines the application, the **ng-controller** directive defines the controller.                                     
 
 
 
