@@ -85,11 +85,36 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'node_modules/angular'),
 )
 ```
-#### Below Javascript file hould be in your static folder,Always remeber to give the correct script path location in index.html file
+My main.js file saved on nodes_modules/angular folder
+
+#### Below Javascript file should be in your static folder,Always remeber to give the correct script path location in index.html file
  
  
+```javascript
+
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.firstName= "John";
+  $scope.lastName= "Doe";
+});
+
+
+
+```
+One of the important thing you observed in the above javascript is the **$scope** its the  binding part between the HTML (view) and the JavaScript (controller).
  
- 
+
+### Understanding the Scope
+
+If we consider an AngularJS application to consist of:
+
+    View, which is the HTML.
+    Model, which is the data available for the current view.
+    Controller, which is the JavaScript function that makes/changes/removes/controls the data.
+
+Then the scope is the Model.
+
+The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.
  
  
  
