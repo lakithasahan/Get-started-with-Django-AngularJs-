@@ -127,5 +127,11 @@ The scope is a JavaScript object with properties and methods, which are availabl
  https://www.w3schools.com/angular/default.asp
  
  
+ ## Angular JS Cheat Sheets 
+ 
+ ![angular_expressions_cheatsheet](https://user-images.githubusercontent.com/24733068/65296082-ba68df80-dba6-11e9-9949-91fde7fb5d0d.png)
+![angular](https://user-images.githubusercontent.com/24733068/65296185-fd2ab780-dba6-11e9-809a-38489ac0b702.png)
+
+ 
  
  
